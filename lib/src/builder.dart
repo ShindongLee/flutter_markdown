@@ -136,10 +136,11 @@ class MarkdownBuilder implements md.NodeVisitor {
           recognizer: _linkHandlers.isNotEmpty ? _linkHandlers.last : null,
         );
 
-    _inlines.last.children.add(new RichText(
+    _inlines.last.children.add(new Container(
+      child:RichText(
       textScaleFactor: styleSheet.textScaleFactor,
       text: span,
-    ));
+    )));
   }
 
   @override
